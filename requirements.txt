@@ -1,0 +1,27 @@
+# --- Core LangChain framework (LCEL / Runnables live here) ---
+langchain
+langchain-core
+langchain-community
+
+# --- Mistral AI integration (for your agent LLMs) ---
+langchain-mistralai
+mistralai
+
+# --- LangGraph (for create_react_agent, multi-agent orchestration) ---
+langgraph
+
+# --- Tool 1: Tavily search ---
+tavily-python
+langchain-tavily
+
+# --- Tool 2: BeautifulSoup for web scraping ---
+beautifulsoup4
+requests
+lxml
+
+# --- Environment / config management ---
+python-dotenv
+
+# --- Optional but commonly needed for agent projects ---
+pydantic
+typing-extensions
