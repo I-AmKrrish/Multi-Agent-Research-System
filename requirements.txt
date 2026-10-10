@@ -6,6 +6,8 @@ langchain-community
 # --- Mistral AI integration (for your agent LLMs) ---
 langchain-mistralai
 mistralai
+langchain-groq
+groq
 
 # --- LangGraph (for create_react_agent, multi-agent orchestration) ---
 langgraph
