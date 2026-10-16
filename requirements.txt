@@ -27,3 +27,8 @@ python-dotenv
 # --- Optional but commonly needed for agent projects ---
 pydantic
 typing-extensions
+
+# --- Web Backend & UI ---
+fastapi
+uvicorn
+streamlit
