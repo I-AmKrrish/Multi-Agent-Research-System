@@ -32,7 +32,7 @@ def run_research_pipeline(topic: str)-> dict:
     
     state["search_results"] = extract_tool_outputs(search_results["messages"])
     print("Search Results: ", state["search_results"])
-    # time.sleep(3)
+    time.sleep(3)
 
 
     #Step 2- Reader Agent
@@ -50,7 +50,7 @@ def run_research_pipeline(topic: str)-> dict:
     })
     state["scraped_content"] = extract_text(reader_result["messages"][-1].content)
     print("Scraped Content: ", state["scraped_content"])
-    # time.sleep(3)
+    time.sleep(3)
 
 
 
@@ -68,7 +68,7 @@ def run_research_pipeline(topic: str)-> dict:
         "research": research_combined
     })
     print("\n Final Report: \n", state["report"])
-    # time.sleep(3)
+    time.sleep(3)
 
 
     #Critic Report

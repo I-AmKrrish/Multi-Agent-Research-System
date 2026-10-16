@@ -30,10 +30,9 @@ load_dotenv()
 
 
 llm = ChatGroq(
-    model="llama-3.3-70b-versatile",
+    model="openai/gpt-oss-120b",
     temperature=0,
 )
-
 
 
 #1st agent
@@ -42,11 +41,12 @@ def build_search_agent():
         model=llm,
         tools=[web_search],
         system_prompt=(
-            "You are a research assistant. Use the web_search tool to find "
-            "recent, reliable information on the given topic. When presenting "
-            "findings, always preserve and include the exact source URLs "
-            "returned by the tool — never omit or paraphrase them away."
-            "Only use the tools provided to you (web_search). Never call any other tool."
+            """You are a research assistant. Use the web_search tool to find 
+            recent, reliable information on the given topic. When presenting 
+            findings, always preserve and include the exact source URLs 
+            returned by the tool — never omit or paraphrase them away.
+            Only use the tools provided to you (web_search). Never call any other tool.
+            Always call web_search(query_string) and never leave query_string blank """
         ),
     )
 

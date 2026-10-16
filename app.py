@@ -12,6 +12,7 @@ run_button = st.button("Run Research Pipeline", type="primary", disabled=not top
 if run_button and topic:
     with st.status("Running multi-agent research pipeline...", expanded=True) as status:
         st.write("Step 1 — Search agent gathering sources...")
+        print(topic)
         state = run_research_pipeline(topic)
         status.update(label="Pipeline complete ✅", state="complete", expanded=False)
 
